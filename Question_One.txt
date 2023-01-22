@@ -1,0 +1,33 @@
+Describe higher order functions.
+
+In JavaScript, functions are treated as first-class citizens. We can treat functions as values and assign them to another variable, pass them as arguments to another function, or even return them from another function.
+
+This ability of functions to act as first-class functions is what powers higher order functions in JavaScript.
+
+Basically, a function which takes another function as an argument or returns a function is known as a higher order function.
+
+
+    Argument -> 
+                Input ->> Higher Order Function ->> A function 
+                                                                <- Return
+
+
+
+Example with a code -> 
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+function filterOdd(arr) {
+  const filteredArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      filteredArr.push(arr[i]);
+    }
+  }
+  return filteredArr;
+}
+console.log(filterOdd(arr));
+
+// Output:
+// [ 1, 3, 5, 7, 9, 11 ]
+               
